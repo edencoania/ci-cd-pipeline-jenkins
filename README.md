@@ -53,6 +53,3 @@ To run the pipeline manually:
 - After deployment, the pipeline automatically cleans up Docker resources using `docker system prune -f`.
 - Ensure to monitor and manage Docker resources to avoid excessive buildup.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
