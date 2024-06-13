@@ -1,0 +1,23 @@
+services:
+  web_nginx:
+    ports:
+      - "5000:5000"
+      - "80:80"
+    image: "edencoania/release:nginx-${deploy}"
+    networks:
+      - weather
+
+  web_gunicorn:
+    container_name: "app1"
+    image: "edencoania/release:app-${deploy}"
+    networks:
+      - weather
+  
+  web_gunicorn2:
+    container_name: "app2"
+    image: "edencoania/release:app-${deploy}"
+    networks:
+      - weather
+
+networks:
+  weather:

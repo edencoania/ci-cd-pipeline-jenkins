@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body style="background-color: lightblue;">
+    <a href="http://127.0.0.1:5000"> HOME </a>
+    <h1>{{ filtered_data['location']['resolvedAddress'] }}</h1>
+
+ <table border="1" style="border-collapse: collapse; width: 60%;">
+     <tr style="border: 1px solid #ddd,padding: 12px , text-align: left;">
+        <th>Date</th>
+        <th>Max Day (°C)</th>
+        <th>Min Night (°C)</th>
+        <th>Humidity</th>
+    </tr>
+
+    {% for item in filtered_data['forecast'] %}
+        <tr style="border: 1px solid #ddd,padding: 12px , text-align: left;">
+            <td>{{ item['date'] }}</td>
+            <td>{{ item['max day'] }}</td>
+            <td>{{ item['min night'] }}</td>
+            <td>{{ item['humidity'] }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    
+</body>
+</html>
